@@ -94,6 +94,16 @@ app.put('/x-men/mutants/:id', (req, res) => {
   res.send(mutant)
 })
 
+app.delete('/x-men/mutants/:id', (req, res) => {
+  const mutant = getMutant(req, res) // pegando um mutante
+
+  // pegar a posição dele no array e deletar
+  const index = mutants.indexOf(mutant)
+  mutants.splice(index, 1)
+
+  res.send(mutant)
+})
+
 
 const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`Listening on port ${port}...`))
