@@ -7,6 +7,9 @@
 // Create Reade Update Delete - CRUD Operations
 // HETTP Methods: GET, POST, PUT, DELETE
 
+const Joi = require('joi') // importando um validador
+// queremos a classe Joi
+
 // Intro
 // Express
 // um framework para facilitar na construção de uma api e suas rotas
@@ -15,6 +18,8 @@ const app = express() // colocando tudo o que o express traz em uma variável
 
 app.use(express.json()) // importanto um middleware to express
 // ele aceita formatos json que estamos usando em post
+
+
 
 const mutants = [
   {
@@ -35,13 +40,19 @@ const mutants = [
   }
 ]
 
+
+
 app.get('/', (req, res) => { // criando uma rota
   res.send('Hello World!!!')
 })
 
+
+
 app.get('/x-men/mutants', (req, res) => {
   res.send(mutants)
 })
+
+
 
 app.get('/x-men/:mutant/:power', (req, res) => { // definindo parametros
   // para a minha rota. qualquer nome que eu passar ele vai printar num
@@ -50,6 +61,8 @@ app.get('/x-men/:mutant/:power', (req, res) => { // definindo parametros
   res.send(req.params)
 })
 
+
+
 app.get('/mutants/:group', (req, res) => {
   // query string parameters - usado para adicionar novos dados
   // ao meu serviço backend e para tudo que é opcional
@@ -57,6 +70,8 @@ app.get('/mutants/:group', (req, res) => {
   res.send(req.query)
   // query parameters são dados salvos e alocados em objetos
 })
+
+
 
 app.get('/mutants/x-men/:id', (req, res) => {
   const mutant = mutants.find( m => { // .find é uma função do JS
@@ -73,7 +88,38 @@ app.get('/mutants/x-men/:id', (req, res) => {
   res.send(mutant)
 })
 
+
+
 app.post('/x-men/mutants', (req, res) => { // adicionar um novo item na minha rota
+// Nunca, jamais devemos confiar nos dados que os clientes estão mandando
+// para a nossa api. Por isso é preciso validar os dados que estão entrando.
+// Sendo assim, fazemos uma validação
+
+// if (!req.body.name || req.body.name.length < 3) {
+//   // Acontece que aqui eu estou fazendo duas validações diferentes
+//   res.status(400).send('Name is required and need to have at least 3 caracters')
+//   return
+// }
+  // Talvez seja melhor usar um framework que garanta o tipo de dado
+  // que está entrando e faz esse trabalho de manipular as mensagens de rro
+  // para mim
+  // Para isso temos o JOI
+  const schema = {
+    name: Joi.string().min(3).required()
+  }
+
+  const result = Joi.validate(req.body, schema) // validando o tipo de dado que eu defini
+  // que eu quero que entre. Função com dois parametros. O body da requisição
+  // e o schema que eu montei. Tudo centro de uma variável pois ele
+  // me retornará um objeto com um monte de informações.
+  // console.log(result)
+  // No resultado a gente consegue ver que é uma msg gigante que ele retorna para o usuário
+  // podemos simplificar
+  if (result.error) {
+    res.status(400).send(result.error.details[0].message)
+    return
+  }
+
   const mutant = {
     id: mutants.length + 1,
     name: req.body.name
@@ -83,6 +129,9 @@ app.post('/x-men/mutants', (req, res) => { // adicionar um novo item na minha ro
   mutants.push(mutant) // adicionando ao array
   res.send(mutant) // printando na tela
 })
+
+
+
 
 // levantando um listener
 const port = process.env.PORT || 3001 // dando uma porta para a minha
