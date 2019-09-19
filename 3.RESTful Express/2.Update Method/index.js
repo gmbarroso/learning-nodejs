@@ -61,7 +61,6 @@ app.get('/x-men/mutants/:id', (req, res) => {
 })
 
 app.post('/x-men/mutants', (req, res) => {
-
   const result = validateMutantName(req, res)
   if (result.error) {
     return res.status(400).send(result.error.details[0].message)
