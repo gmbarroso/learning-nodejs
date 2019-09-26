@@ -12,15 +12,15 @@ const cardOptions = [
   "debit_card"
 ]
 
-const validateTransaction = (req, res) => {
-  const schema = {
+const validateTransaction = (req) => {
+  const schema = Joi.object({
     amount: Joi.number().min(100).required(),
     product: Joi.string().max(30).required(),
     payment_method: Joi.valid(cardOptions),
     card_number: Joi.string().min(13).max(16).required(),
     owner: Joi.string(),
     cvv: Joi.string().min(3)
-  }
+  }).required()
 
   // validação de cartão pagar.me
   // começa com 4 visa
@@ -30,7 +30,8 @@ const validateTransaction = (req, res) => {
   // a bandeira fala que o cartão não existe.
   // só sabemos que o cartão não existe na hora da transação
 
-  return result = Joi.validate(req.body, schema)
+  // return Joi.validate(req.body, schema, { abortEarly: false })
+  return schema.validate(req.body, { abortEarly: false })
 }
 
 const formatDate = (date) => {
@@ -47,7 +48,7 @@ const formatDate = (date) => {
   return day + '/' + monthNames[monthIndex] + '/' + year;
 }
 
-app.get('/transactions', (req, res) => {
+app.get('/transactions', (req, res) => { // tenho que colocar o req mesmo quando não usado
   const transactionWithDateFormated = transactions.map((transaction) => {
     return ({
       ...transaction,
@@ -58,12 +59,26 @@ app.get('/transactions', (req, res) => {
 })
 
 app.post('/transactions', (req, res) => {
-  const result = validateTransaction(req, res)
-
+  const result = validateTransaction(req)
   const cardNumber = req.body.card_number
 
+  // if (result.error) {
+  //   return res.status(400).send(result.error.details)
+  // }
+
   if (result.error) {
-    return res.status(400).send(result.error.details[0].message)
+    // const resultTransformed = Object.values(result.error.details).map((teste) => {
+    const resultTransformed = result.error.details.map((teste) => {
+      return ({
+        parameter: teste.path[0],
+        message: teste.message
+      })
+    })
+
+    return res.status(400).send({
+      error: true, // cuidado com over engeneering
+      validationErrors: resultTransformed
+    })
   }
   
   const transaction = {

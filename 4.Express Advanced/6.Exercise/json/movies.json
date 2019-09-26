@@ -1,0 +1,404 @@
+[
+    {
+        "id": 1,
+        "title": "Robin Hood",
+        "year": 2018,
+        "cast": [
+            "Taron Egerton",
+            "Jamie Foxx",
+            "Ben Mendelsohn",
+            "Eve Hewson",
+            "Jamie Dornan",
+            "Tim Minchin",
+            "Paul Anderson"
+        ],
+        "genres": [
+            "Action",
+            "Adventure"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Green Book",
+        "year": 2018,
+        "cast": [
+            "Viggo Mortensen",
+            "Mahershala Ali",
+            "Linda Cardellini"
+        ],
+        "genres": [
+            "Drama"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The Favourite",
+        "year": 2018,
+        "cast": [
+            "Emma Stone",
+            "Rachel Weisz",
+            "Olivia Colman",
+            "Nicholas Hoult",
+            "Joe Alwyn",
+            "Mark Gatiss"
+        ],
+        "genres": [
+            "Biography",
+            "Drama"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Anna and the Apocalypse",
+        "year": 2018,
+        "cast": [
+            "Ella Hunt",
+            "Malcolm Cumming",
+            "Marli Siu",
+            "Sarah Swire",
+            "Christopher Leveaux",
+            "Ben Wiggins"
+        ],
+        "genres": [
+            "Horror",
+            "Musical",
+            "Comedy"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "If Beale Street Could Talk",
+        "year": 2018,
+        "cast": [
+            "Kiki Layne",
+            "Stephan James",
+            "Teyonah Parris",
+            "Regina King",
+            "Dave Franco",
+            "Ed Skrein",
+            "Diego Luna",
+            "Emily Rios"
+        ],
+        "genres": [
+            "Drama",
+            "Romance"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Mary Queen of Scots",
+        "year": 2018,
+        "cast": [
+            "Saoirse Ronan",
+            "Margot Robbie",
+            "Jack Lowden",
+            "Martin Compston",
+            "Joe Alwyn",
+            "Brendan Coyle",
+            "David Tennant",
+            "Guy Pearce"
+        ],
+        "genres": [
+            "Historical",
+            "Drama"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Under the Silver Lake",
+        "year": 2018,
+        "cast": [
+            "Andrew Garfield",
+            "Riley Keough",
+            "Topher Grace",
+            "Zosia Mamet",
+            "Jimmi Simpson",
+            "Luke Baines",
+            "Patrick Fischler"
+        ],
+        "genres": [
+            "Noir",
+            "Crime",
+            "Thriller"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Silence",
+        "year": 2018,
+        "cast": [
+            "Miranda Otto",
+            "Stanley Tucci",
+            "John Corbett"
+        ],
+        "genres": [
+            "Drama",
+            "Thriller"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "This One's for the Ladies",
+        "year": 2018,
+        "cast": [
+            "C-Pudding",
+            "Poundcake",
+            "Tyga & Raw Dawg",
+            "Sweet Tea",
+            "Young Rider",
+            "Blaze",
+            "Michele",
+            "Double Trouble",
+            "Satan",
+            "Fever"
+        ],
+        "genres": [
+            "Documentary"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Ben Is Back",
+        "year": 2018,
+        "cast": [
+            "Lucas Hedges",
+            "Julia Roberts",
+            "Kathryn Newton",
+            "Courtney B. Vance"
+        ],
+        "genres": [
+            "Drama"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Mortal Engines",
+        "year": 2018,
+        "cast": [
+            "Hera Hilmar",
+            "Robert Sheehan",
+            "Hugo Weaving",
+            "Jihae",
+            "Ronan Raftery",
+            "Leila George",
+            "Patrick Malahide",
+            "Stephen Lang"
+        ],
+        "genres": [
+            "Science Fiction",
+            "Action",
+            "Adventure"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Spider-Man: Into the Spider-Verse",
+        "year": 2018,
+        "cast": [
+            "Shameik Moore",
+            "Hailee Steinfeld",
+            "Mahershala Ali",
+            "Jake Johnson",
+            "Liev Schreiber",
+            "Brian Tyree Henry",
+            "Luna Lauren Velez",
+            "Lily Tomlin",
+            "John Mulaney",
+            "Kimiko Glenn",
+            "Nicholas Cage"
+        ],
+        "genres": [
+            "Animated",
+            "Superhero",
+            "Action",
+            "Comedy"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "The Mule",
+        "year": 2018,
+        "cast": [
+            "Clint Eastwood",
+            "Bradley Cooper",
+            "Laurence Fishburne",
+            "Michael Peña",
+            "Dianne Wiest",
+            "Andy Garcia"
+        ],
+        "genres": [
+            "Drama",
+            "Crime",
+            "Biography"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Vice",
+        "year": 2018,
+        "cast": [
+            "Christian Bale",
+            "Amy Adams",
+            "Steve Carell",
+            "Sam Rockwell",
+            "Alison Pill",
+            "Jesse Plemons",
+            "Lily Rabe",
+            "Bill Pullman",
+            "Tyler Perry"
+        ],
+        "genres": [
+            "Biography",
+            "Drama"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Second Act",
+        "year": 2018,
+        "cast": [
+            "Jennifer Lopez",
+            "Vanessa Hudgens",
+            "Leah Remini",
+            "Annaleigh Ashford",
+            "Freddie Stroma",
+            "Dan Bucatinsky",
+            "Milo Ventimiglia",
+            "Treat Williams",
+            "Larry Miller"
+        ],
+        "genres": [
+            "Romance",
+            "Comedy"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Mary Poppins Returns",
+        "year": 2018,
+        "cast": [
+            "Emily Blunt",
+            "Lin-Manuel Miranda",
+            "Ben Whishaw",
+            "Emily Mortimer",
+            "Julie Walters",
+            "Colin Firth",
+            "Meryl Streep",
+            "Dick Van Dyke",
+            "Angela Lansbury"
+        ],
+        "genres": [
+            "Musical",
+            "Fantasy"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Aquaman",
+        "year": 2018,
+        "cast": [
+            "Jason Momoa",
+            "Amber Heard",
+            "Willem Dafoe",
+            "Patrick Wilson",
+            "Dolph Lundgren",
+            "Yahya Abdul-Mateen II",
+            "Nicole Kidman"
+        ],
+        "genres": [
+            "Superhero",
+            "Action",
+            "Adventure"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Bumblebee",
+        "year": 2018,
+        "cast": [
+            "Hailee Steinfeld",
+            "John Cena",
+            "Jorge Lendeborg Jr.",
+            "Jason Drucker",
+            "Rachel Crow",
+            "Pamela Adlon"
+        ],
+        "genres": [
+            "Action",
+            "Adventure",
+            "Science Fiction"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Welcome to Marwen",
+        "year": 2018,
+        "cast": [
+            "Steve Carell",
+            "Leslie Mann",
+            "Diane Kruger",
+            "Falk Hentschel",
+            "Janelle Monáe",
+            "Eiza Gonzalez",
+            "Gwendoline Christie"
+        ],
+        "genres": [
+            "Fantasy",
+            "Drama"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Holmes and Watson",
+        "year": 2018,
+        "cast": [
+            "Will Ferrell",
+            "John C. Reilly",
+            "Rebecca Hall",
+            "Ralph Fiennes",
+            "Rob Brydon",
+            "Kelly Macdonald",
+            "Lauren Lapkus",
+            "Hugh Laurie"
+        ],
+        "genres": [
+            "Action",
+            "Mystery",
+            "Comedy"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "On the Basis of Sex",
+        "year": 2018,
+        "cast": [
+            "Felicity Jones",
+            "Armie Hammer",
+            "Justin Theroux",
+            "Jack Reynor",
+            "Cailee Spaeny",
+            "Sam Waterston",
+            "Kathy Bates"
+        ],
+        "genres": [
+            "Biography",
+            "Drama"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Destroyer",
+        "year": 2018,
+        "cast": [
+            "Nicole Kidman",
+            "Tatiana Maslany",
+            "Sebastian Stan",
+            "Toby Kebbell",
+            "Scoot McNairy"
+        ],
+        "genres": [
+            "Crime",
+            "Thriller"
+        ]
+    }
+]
