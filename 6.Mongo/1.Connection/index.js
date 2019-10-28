@@ -36,13 +36,42 @@ const createCourse = async () => {
 
 const getCourses = async () => { // commandos que podemos aplicar para retornar
     // os itens da minha db
+
+    // Comparrison Operators
+    // eq equal
+    // ne not equal
+    // gt greater than
+    // gte greater or equal to
+    // lt less than
+    // lte lass than or equal to
+    // in
+    // nin not in
+
+    // Logical Operators
+    // or
+    // and
+
+    //Pagination
+    const pageNumber = 2
+    const pageSize = 10
+    // /api/courses?pageNumber=2&pageSize=10
+
     const courses = await Course
         // .find() // returns DocumentQueryObj
         .find({ author: 'Guilherme Barroso', isPublished: true })
+        .skip((pageNumber -1) * pageSize)
         // .filter
-        .limit(10)
+        // .find ({ price: { $gt: 10, $lte: 20 } }) // greater than 10 dollars
+        // .find( {price: { $in: [10, 15, 20]}})
+        // .find()
+        // .or([ { author: 'Guilherme Barroso' }, { isPublished: true } ]) // and igual
+        // .find({ author: /^Guilherme/ }) // Regex para achar Guulherme tb
+        // .find({ author: /Barroso$/i })
+        // .find({ author: /.*Guilherme.*/i })
+        .limit(pageSize)
         .sort({ name: 1 }) // 1 = assending -1 = dessending
-        .select({ name: 1, tags: 1 })
+        .count()
+        // .select({ name: 1, tags: 1 })
     console.log(courses)
 }
 
